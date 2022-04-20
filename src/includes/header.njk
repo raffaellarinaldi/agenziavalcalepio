@@ -1,0 +1,45 @@
+<div class="site-wrap">
+  <div class="border-bottom bg-white top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <p class="mb-0">
+            <a href="tel:+{{ site.phone.land | replace(" ", "") }}" class="mr-3">
+              <span class="text-black fl-bigmug-line-phone351"></span>
+              <span class="d-none d-lg-inline-block ml-2">{{ site.phone.land }}</span>
+            </a>
+            <a href="tel:+{{ site.phone.mobile | replace(" ", "") }}" class="mr-3">
+              <span class="text-black fl-bigmug-line-cellular9"></span>
+              <span class="d-none d-lg-inline-block ml-2">{{ site.phone.mobile }}</span>
+            </a>
+            <a href="mailto:{{ site.email }}">
+              <span class="text-black fl-bigmug-line-email64"></span>
+              <span class="d-none d-lg-inline-block ml-2">{{ site.email }}</span>
+            </a>
+          </p>
+        </div>
+        <div class="col-6 text-right">
+          <a href="{{ site.network.facebook }}" class="mr-3" target="_blank"><span class="text-black icon-facebook"></span></a>
+          {# <a href="{{ site.network.instagram }}" class="mr-3" target="_blank"><span class="text-black icon-instagram"></span></a> #}
+          <a href="{{ site.network.linkedin }}" class="mr-3" target="_blank"><span class="text-black icon-linkedin"></span></a>
+          <a href="{{ site.network.google }}" class="mr-0" target="_blank"><span class="text-black icon-google"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-navbar">
+    <div class="container py-1">
+      <div class="row align-items-center">
+        <div class="col-8 col-xl-4">
+          <h1 class="d-none">{{ site.title }}</h1>
+          <a class="navbar-brand" href="{{ site.url }}"><img src="{{ 'assets/img/logo.png' | url }}" class="img-fluid w-100"></a>
+        </div>
+        <div class="col-4 col-xl-8 text-right">
+          <span class="navbar-text d-none d-xl-inline-block">
+            Organizzazione vendite immobili residenziali e commerciali, gestioni immobiliari
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

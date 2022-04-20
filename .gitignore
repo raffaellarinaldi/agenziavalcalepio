@@ -1,0 +1,9 @@
+node_modules
+dist
+netlify/functions/onrequest/**
+!netlify/functions/onrequest/index.js
+npm-debug.log
+.cache
+.env
+.DS_Store
+gulpfile.js

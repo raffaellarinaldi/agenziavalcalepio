@@ -1,0 +1,52 @@
+<div class="site-section site-section-sm bg-light">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <div class="site-section-title">
+          <h2>Novità</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      {% for property in properties %}
+      {% if loop.index <= 6 %}
+      <div class="col-12 col-md-6 col-xl-4 mb-4">
+        <a href="{{ property.url }}" target="_blank" class="prop-entry d-block">
+          <figure>
+            <img src="{{ property.image | replace("https://", "https://images.weserv.nl/?url=") }}&w=600&h=600&fit=cover&a=attention" alt="{{ property.title }}" class="img-fluid">
+          </figure>
+          <div class="prop-text">
+            <div class="inner">
+              <span class="price rounded">{{ property.price }}</span>
+              <h3 class="title">{{ property.title | safe }}</h3>
+              <p class="location">{{ property.city }}</p>
+            </div>
+            <div class="prop-more-info">
+              <div class="inner d-flex text-center">
+                <div class="col">
+                  <span>Area:</span>
+                  <strong>{{ property.sqm }}m<sup>2</sup></strong>
+                </div>
+                <div class="col">
+                  <span>Camere:</span>
+                  <strong>{{ property.bed }}</strong>
+                </div>
+                <div class="col">
+                  <span>Bagni:</span>
+                  <strong>{{ property.bath }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="lead">Sfoglia tutti gli Annunci su<br><a class="btn btn-primary btn-lg" href="https://www.agenziavalcalepio.it/" target="_blank">AgenziaValCalepio.it</a></p>
+      </div>
+    </div>
+  </div>
+</div>
